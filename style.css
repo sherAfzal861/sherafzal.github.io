@@ -1,0 +1,181 @@
+body{
+    margin: auto;
+    padding: auto;
+    overflow-x: hidden;
+}
+/* style for top */
+.top{
+    z-index: 3;
+    position: sticky;
+    top: 1px;
+    background-color: rgb(10, 6, 1);
+    margin: 0px;
+    padding: 0px 0px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+
+}
+.top h3{
+    
+    padding-top: 5px;
+    padding-left: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.top .logo{
+    width: 100px;
+    padding-top: 5px;
+   
+}
+.images{
+    margin-left: -10px;
+}
+/* end of top */
+ul{
+    padding-top: 15px;
+}
+.logo{
+    width: 50px;
+    padding-top: 15px;
+    display: inline;
+}
+header{
+    display: flex;
+    padding-left: 15px;
+    justify-content: space-between;
+}
+header ul{
+    display: inline;
+    position: absolute;
+    padding-top: 0px;
+    margin-bottom: 15px;
+}
+header li{
+    list-style: none;
+    display: inline;
+    position: relative;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar{
+    margin-top: -20px;
+    overflow: hidden;
+    position: sticky;
+    top: 65px;
+    padding-right: 180px;
+    height: 30rem;
+    width: 200px;
+    background-color: aqua;
+
+}
+.inline{
+    display: inline;
+}
+.main{
+    display: flex;
+    margin-top: 0px;
+}
+img{
+    padding-left: 10px;
+    width: 100%;
+}
+.intro{
+    width: 90%;
+    margin-left: 25px;
+    
+}
+.services{
+    display: flex;
+    padding-right: 60px;
+    margin-left: 25px;
+}
+.service-img{
+    width: 200px;
+}
+.contact{
+    background: url('contact.jpg') no-repeat center center/cover;
+    height: 200px;
+    position: relative;
+    display: flex;
+}
+.footer{
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    
+}
+/* utility classes */
+.center{
+        text-align: center;
+}
+.serif{
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+/* css for bus service  */
+.set-content{
+    margin: 0px 20px;
+}
+.scope table{
+    column-gap: 200px;
+    display: block;
+}
+.scope table::before{
+    content: '';
+    opacity: 0.3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    column-gap: 200px;
+    
+}
+.scope table td{
+    padding: 10px 30px;
+}
+.connect ul li{
+    display: inline;
+    margin:0px 5px
+}
+.connect h5{
+    margin: 10px 0px 0px 10px ;
+}
+.connect ul{
+    padding-left: 20px;
+    margin: 0px;
+}
+.connect a{
+    text-decoration: none;
+}
+.client ul{
+    display: flex;
+    margin-top: 0px;
+
+}
+.client ul li{
+    margin: auto 20px  ;
+    list-style-type: none;
+    text-align: center;
+}
+.client h5{
+    margin-bottom: 0px;
+}
+.client img{
+    width: 30px;
+}
+.client a{
+    text-decoration: none;
+}
+.w-note{
+    text-align: end;
+}
+header marquee{
+    padding-right: 20px;
+    margin-right: 20px;
+}

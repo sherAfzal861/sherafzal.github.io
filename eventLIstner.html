@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #field{
+            height: 250px;
+            width: 300px;
+            border: 10px solid black;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: greenyellow;
+        }
+        #ball{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            transition: all 2s;
+        }
+    </style>
+</head>
+<body style="height: 2000px;">
+    <div id="field">
+        <img src="ball.svg" alt="" id="ball">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    </div>
+    <script>
+        field.onclick = function(event){
+            let fieldcords = this.getBoundingClientRect();
+            let ballcords = {
+                top: event.clientY - fieldcords.top - field.clientTop - ball.clientHeight/2,
+                left: event.clientX - fieldcords.left - field.clientLeft - ball.clientWidth/2
+            }
+            if(ballcords.top<0) ballcords.top = 0;
+            if(ballcords.left<0) ballcords.left = 0;
+            if(ballcords.left + ball.clientWidth > field.clientWidth){
+                ballcords.left = field.clientWidth - ball.clientWidth
+            }
+            if(ballcords.top + ball.clientHeight > field.clientHeight){
+                ballcords.top = field.clientHeight - ball.clientHeight
+            }
+            ball.style.top = ballcords.top + 'px'
+            ball.style.left = ballcords.left + 'px'
+        }
+    </script>
+</body>
+</html>
